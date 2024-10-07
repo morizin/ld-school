@@ -3,6 +3,7 @@ import streamlit as st
 import tensorflow as tf
 from tensorflow.keras import models, layers
 from tensorflow.keras.applications import EfficientNetB0
+# import efficientnet.tfkeras as efn
 from PIL import Image
 from tensorflow.keras.optimizers import Adam
 import numpy as np
@@ -25,10 +26,7 @@ def create_model():
     return model
 
 model = create_model()
-model.load_weights('EfNetB0_275_16.h5')
-
-# # Load your pre-trained model
-# model = tf.keras.models.load_model('Cassava Leaf Model 1.h5')
+model.load_weights('EffNetB0 512 8.h5')
 
 # Function to preprocess the image and make predictions
 def lung_defect(img):
